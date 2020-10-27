@@ -1,0 +1,5 @@
+.ipynb_checkpoints/
+build/
+dist/
+SITH_Layer.egg-info/
+
