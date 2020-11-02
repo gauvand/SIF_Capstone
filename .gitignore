@@ -3,3 +3,5 @@ Arshiya_Ansari/build/
 Arshiya_Ansari/dist/
 Arshiya_Ansari/SITH_Layer.egg-info/
 /train
+/SITH_Layer.egg-info/
+.DS_Store
