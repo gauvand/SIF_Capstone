@@ -1,7 +1,10 @@
 /.ipynb_checkpoints
-Arshiya_Ansari/build/
-Arshiya_Ansari/dist/
-Arshiya_Ansari/SITH_Layer.egg-info/
+/Arshiya_Ansari/build/
+/Arshiya_Ansari/dist/
+/Arshiya_Ansari/SITH_Layer.egg-info/
 /train
 /SITH_Layer.egg-info/
 .DS_Store
+/Yibo_Wang/.ipynb_checkpoints
+/Arshiya_Ansari/.ipynb_checkpoints
+/Gaurav_Anand/.ipynb_checkpoints
