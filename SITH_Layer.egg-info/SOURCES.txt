@@ -1,0 +1,5 @@
+README.md
+SITH_Layer.egg-info/PKG-INFO
+SITH_Layer.egg-info/SOURCES.txt
+SITH_Layer.egg-info/dependency_links.txt
+SITH_Layer.egg-info/top_level.txt
