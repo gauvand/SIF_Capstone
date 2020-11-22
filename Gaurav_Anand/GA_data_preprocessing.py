@@ -44,7 +44,7 @@ def create_raw(datafile,dir_address,test=False,sfreq=500):
     chnames = pd.read_csv(f"{dir_address}/{subfolder}/{datafile}").columns[1:].to_list()
     info = mne.create_info(chnames,sfreq,ch_types=['eeg']*len(chnames))
     samples = 1e-6*np.genfromtxt(file_address,delimiter=",")[1:,1:].T
-    raw = mne.io.RawArray(samples,info)
+    raw = mne.io.RawArray(samples,info,verbose="critical")
     return raw, chnames
 
 def add_events(raw,event,dir_address,test=False):
@@ -66,9 +66,9 @@ def add_events(raw,event,dir_address,test=False):
         sample_numbers = list(range(0,len(event_data)))
         event_name = event_names[i][0:15]
         event_samples = np.vstack((sample_numbers,[np.random.randint(100) for i in range(len(sample_numbers))],event_data)).T
-        info = mne.create_info([event_name], raw.info['sfreq'], ['stim'])
+        info = mne.create_info([event_name], raw.info['sfreq'], ['stim'],verbose="critical")
         stim_data = np.zeros((1, raw.n_times))
-        stim_raw = mne.io.RawArray(stim_data, info)
+        stim_raw = mne.io.RawArray(stim_data, info,verbose="critical")
         raw.add_channels([stim_raw], force_update_info=True)
         raw.add_events(events=event_samples,stim_channel = event_name)
     return list(map(lambda x: x[0:15],event_names))
