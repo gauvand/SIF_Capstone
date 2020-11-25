@@ -74,12 +74,18 @@ def add_events(raw,event,dir_address,test=False):
     return list(map(lambda x: x[0:15],event_names))
 
 
-def get_data(subject_id, subject_series,dir_address,test=False):
+def get_train_data(subject_id, subject_series,dir_address):
+    test = False
     data,events = get_subject_files(subject_id,dir_address,series=subject_series,test=test)
     raw, ch_names = create_raw(data[0],dir_address,test=test)
     event_names = add_events(raw,events[0],dir_address,test=test)
     return raw
 
+def get_test_data(subject_id,subject_series,dir_address):
+    test = True
+    data,events = get_subject_files(subject_id,dir_address,series=subject_series,test=test)
+    raw, ch_names = create_raw(data[0],dir_address,test=test)
+    return raw
 
 if __name__ == "__main__":
 
