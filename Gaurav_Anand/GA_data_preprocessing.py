@@ -9,11 +9,11 @@ from mne import pick_types
 from mne.decoding import CSP
 def get_subject_files(subject,dir_address,test=False,series=None):
     '''
-    dir_address: refers to the folder which contains the training and testing subfolders
-    subject: refers to the subject number to return
-    test: refers to whether you want training or testing data
+    :param dir_address: refers to the folder which contains the training and testing subfolders
+    :param subject: refers to the subject number to return
+    :param test: refers to whether you want training or testing data
             If no opton is given, then the training files are automatically chosen
-    series: refers to the specific series that you want to access
+    :param series: refers to the specific series that you want to access
             If no series is given, returns all subject files
     '''
     if test:
@@ -31,7 +31,7 @@ def get_subject_files(subject,dir_address,test=False,series=None):
 
 def create_raw(datafile,dir_address,test=False,sfreq=500):
     '''
-    datafile: refers to the address of the file you are trying to access
+    :param datafile: refers to the address of the file you are trying to access
     dir_address: refers to the address of the directory you are trying to access (directory contains file)
     test: if True, returns testing files, else looks for training files
     sfreq: refers to the sampling frequency, if none given, 500 Hz
@@ -129,3 +129,6 @@ if __name__ == "__main__":
     # interactive plot - can interact
     # %matplotlib qt
     # raw.plot(events=events_mne,n_channels=1,duration=100,scalings=scalings,verbose=False); plt.show()
+
+    
+    
