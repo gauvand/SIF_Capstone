@@ -14,8 +14,8 @@ All work in this repository belongs to Gaurav Anand (ga7er@virginia.edu), Yibo W
 	Use sequence length of 50000 and stride size of 5000 (overlaped sequence for each batch)for each minibatch.
 
 	**Note**  
-	The code is tested on Rivanna with GPU. (may needs some tweeks with CPU only)
+	The code is tested on Rivanna with GPU. (may needs some tweaks with CPU only)
 	Need train_util.py and Deep_isith_EEG.py helper functions as well as the SITH_Layer_master package
 	
 	![plot](./subject1_result_deep_isith.png)
-	![Alt text](/subject1_result_deep_isith.img.jpg.png?raw=true "Title")
+
