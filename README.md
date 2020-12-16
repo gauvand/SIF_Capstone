@@ -18,4 +18,6 @@ All work in this repository belongs to Gaurav Anand (ga7er@virginia.edu), Yibo W
 	Need train_util.py and Deep_isith_EEG.py helper functions as well as the SITH_Layer_master package
 	
 	![plot](./subject1_result_deep_isith.png)
-
+	
+	**Result**
+	Average AUC on the holdout set for all six events for Subject1 is **0.97**
