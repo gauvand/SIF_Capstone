@@ -7,17 +7,14 @@ All work in this repository belongs to Gaurav Anand (ga7er@virginia.edu), Yibo W
 
 1. Preliminary Result (12/15/2020)
 
-	Methods
+	**Methods**  
 	For now, only consider one subject (subject1) for modeling. Predict only one event/channel a time (since there are events overlapping), and incorporate sliding-window standardization and filtering.
 	Load all eight events and split into 80% training and 20% validation/holdout set.
 	Use dataset and dataloader pytorch classes to control batch processing.
 	Use sequence length of 50000 and stride size of 5000 (overlaped sequence for each batch)for each minibatch.
 
-	Note
+	**Note**  
 	The code is tested on Rivanna with GPU. (may needs some tweeks with CPU only)
 	Need train_util.py and Deep_isith_EEG.py helper functions as well as the SITH_Layer_master package
 
-	Github repository
-	https://github.com/gauvand/SIF_Capstone
-	https://github.com/compmem/SITH_Layer
 	![Alt text](/subject1_result_deep_isith.img.jpg.png?raw=true "Title")
