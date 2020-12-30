@@ -104,7 +104,7 @@ def creat_mne_raw_object(fname,read_events=True):
     return raw
 
 def filter_standardization(raw,window_size = 1000,
-                          l_freq = 0,h_freq = 30,nClass = 3, verbose = False):
+                          l_freq = 0,h_freq = 30, verbose = False):
     """
     raw: raw object from mnew
     window_size: rolling window_size for standardization,
@@ -124,15 +124,15 @@ def filter_standardization(raw,window_size = 1000,
 
     data = raw.get_data()
     # strip the first 99 data points due to rolling window implementation
-    target_signal = target_signal_val =data[32+nClass-1,window_size-1:] # use only one channel
+    target_signal = target_signal_val =data[32:38,window_size-1:] # export all channels, use only one channel eventually
     #print(input_signal.shape,target_signal.shape)
     
     # reformatt into tensor
-    input_tensor = ttype(input_signal.reshape(1,1,input_signal.shape[0],-1))
-    target_tensor = labeltype(target_signal.reshape(-1))
+#     input_tensor = ttype(input_signal.reshape(1,1,input_signal.shape[0],-1))
+#     target_tensor = labeltype(target_signal.reshape(-1))
 
     #print(input_tensor.shape, target_tensor.shape)
-    return (input_tensor, target_tensor)
+    return (input_signal, target_signal)
 
 def train_model(model, ttype, train_loader, val_loader, 
            optimizer, loss_func, epochs, 
@@ -224,14 +224,17 @@ def test_model(model, val_loader):
 
         # flatten the predicted result 
         y_true = np.ndarray.flatten(labels.detach().cpu().numpy())
+        
+        try: # incase there is only one class
+            auc = roc_auc_score(y_true = y_true,y_score = y_score)
 
-        auc = roc_auc_score(y_true = y_true,y_score = y_score)
-
-        auc_list.append(auc)
-
+            auc_list.append(auc)
+        except:
+            auc_list.append(np.nan)
+    acc = np.array(auc_list)
         #acc = matthews_corrcoef(y_true = y_true, y_pred = y_pred)
         # return the average
-    return sum(auc_list)/len(auc_list)
+    return np.nanmean(acc)
 
 
 
