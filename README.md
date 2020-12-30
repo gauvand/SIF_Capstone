@@ -19,5 +19,6 @@ All work in this repository belongs to Gaurav Anand (ga7er@virginia.edu), Yibo W
 	
 	![plot](./subject1_result_deep_isith.png)
 	
-	**Result**
-	Average AUC on the holdout set for all six events for Subject1 is **0.97**
+	**Result**  
+	Average AUC on the holdout set for all six events for Subject1 is **0.97**  
+	Average AUC on the holdout set for all events and for all subject is **0.935**
