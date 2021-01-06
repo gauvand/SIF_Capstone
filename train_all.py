@@ -10,9 +10,9 @@ Yibo Wang
 
 """
 
-from train_util import *
-from Deep_isith_EEG import *
-from base_models import *
+from src.train_util import *
+from models.Deep_isith_EEG_model import *
+from models.LSTM_EEG_model import *
 import pandas as pd
 # read config file
 import configparser

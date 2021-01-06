@@ -1,6 +1,9 @@
-# import sith
-from SITH_Layer_master.sith import iSITH
-from SITH_Layer_master.sith import deep_isith
+# currently use this as a work around for Rivanna to inport iSith
+import sys
+sys.path.append("../SITH_Layer_master")
+from sith import iSITH
+from sith import deep_isith
+
 # pytorch
 import torch
 import torch.nn
