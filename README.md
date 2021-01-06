@@ -11,13 +11,13 @@ All work in this repository belongs to Gaurav Anand (ga7er@virginia.edu), Yibo W
 
 ## Usage Demo
 
-1. *** Download the [Grasp-and-Lift EEG Detection data](https://www.kaggle.com/c/grasp-and-lift-eeg-detection/data)
+1. Download the [Grasp-and-Lift EEG Detection data](https://www.kaggle.com/c/grasp-and-lift-eeg-detection/data)
 
 
-2. Check out example_training.ipynb for installation and training
+2. Check out example_training.ipynb for installation and training.
 
 
-3. Submit SLURM job to train on Rivanna (An example isprovide  in the Slurm folder).
+3. Submit SLURM job to train on Rivanna (An example is provided  in the Slurm_script folder).
 
 
 
