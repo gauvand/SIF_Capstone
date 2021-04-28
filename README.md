@@ -7,7 +7,7 @@ This repository tracks the use and validation of a specialized neural network (S
 
 All work in this repository belongs to Gaurav Anand (ga7er@virginia.edu), Arshiya Ansari (aa9yk@virginia.edu),Beverly Dobrenz (bgd5de@gmail.com), and Yibo Wang (yw9et@virginia.edu). 
 
-![plot](./SITH_overview_v2.png)
+![plot](./SITH_overview_v2.png){:height="50%" width="50%"}
 
 ## Usage Demo
 
