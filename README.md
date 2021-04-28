@@ -15,7 +15,7 @@ All work in this repository belongs to Gaurav Anand (ga7er@virginia.edu), Arshiy
 
 2. Download and install the SITH_Layer-master package from https://github.com/compmem/SITH_Layer
 
-3. Check out example_training.ipynb for installation and training.
+3. Check out example_training.ipynb for installation and training. train_all.py is used to train all subjects. The evaluation notebook is used to evaluate performances of both models on the holdout set.
 
 4. Submit SLURM job to train on Rivanna (An example is provided  in the Slurm_script folder).
 
